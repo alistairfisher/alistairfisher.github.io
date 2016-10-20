@@ -1,7 +1,298 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+layout: blog
+title: index
+permalink: /
+---
+
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+                    <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">{{ site.landing.home }}</span></a></li>
+                    <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">{{ site.landing.about }}</span></a></li>
+                    <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
+                    <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
+                    <!--<li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<section id="about_me" class="features">
+    <div class="container" id="i18_about_me">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="about_me.about_me">About Me</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- python -->
+            <div class="col-xs-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-java"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- linux -->
+            <div class="col-xs-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-shell"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- avatar -->
+            <div class="col-xs-4">
+                <div class="team-member wow zoomIn">
+                    <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+                    <h4><span class="navy">{{ site.author.first_name }}</span> {{ site.author.last_name }}</h4>
+                    <ul class="list-inline social-icon">
+                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li><a href="https://uk.linkedin.com/in/alistair-fisher-833267100" target="blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- html -->
+            <div class="col-xs-2 wow fadeInRight">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-osx"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- docker -->
+            <div class="col-xs-2 wow fadeInRight">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-cplusplus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><span data-i18n="about_me.des">
+                    I'm a 4th year student at the University of Cambridge, studying Part III of the Computer Science Tripos (equivalent to a masters). This year I am focusing on natural language processing, with the hope of moving on to a career in commerical research in that field in Summer 2017.
+                </span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="skills" class="team features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center" id="i18_skills">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="skills.my_skills">My Skills</span></h1>
+                During my time in Cambridge, I've received a broad education in natural language processing, taking courses in linguistics, parsing of natural language, machine learning and other facets of artificial intelligence, and discourse processing. I have reinforced this teaching with practical projects, implementing stochastic part of speech tagging, topic segmentation and anaphora resolution.
+                I tend to favour the Java language in my recent work, primarily for ease of use, but have previously implemented sizable projects in OCaml and C++, and have some experience with Python, C and Clojure.
+            </div>
+        </div>
+    </div>
+</section>
+<section id="project" class="project gray-section features">
+    <div class="container" id="i18_projects">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="projects.my_projects">My Projects</span></h1>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 wow fadeInLeft">
+            <div class="team-member">
+              <img src="{{ site.project.pos.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+              <h4><a href="{{ site.project.pos.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ site.project.pos.name }}</a></h4>
+              <p><span data-i18n="projects.rsser">My current personal project, I am implementing stochastic part of speech tagging in Java. This aims to assign the most likely sequence of CLAWS5 tags to an input phrase, using probabilities estimated from frequencies in a corpus, currently the BNC-Baby. I have implemented XML parsing of the corpus and use the Viterbi algorithm to calculate the most likely tag sequence. The next steps are implementing evaluation and a visualisation of the result.</span></p>
+            </div>
+          </div>
+            <div class="col-sm-6 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{ site.project.orochi.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><a href="https://drive.google.com/file/d/0Bwm-a7jnvMRkMWgxSHBuTl9tRVE/view?usp=sharing" target="blank" style="color: #1ab394" class="navy">{{ site.project.orochi.name }}</a></h4>
+                    <p><span data-i18n="projects.orochi">Orochi was my 3rd year undergraduate project. It was a compiler optimisation aimed to increase software performance on multicore systems by automatically inserting parallelism at function calls. The system was implemented as a pass for the LLVM compiler framework, with software transactional memory used to manage memory side effects and ensure the expected sequential behaviour occured despite out of order execution. Orochi provided performance benefits of up to 3.5X on a 4 core machine and the dissertation describing it received a high first class grade. It can be read here.</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft">
+                <div class="team-member">
+                    <img src="{{ site.project.tweetpuller.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><a href="{{ site.project.tweetpuller.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ site.project.tweetpuller.name }}</a></h4>
+                    <p><span data-i18n="projects.tweetpuller">I've implemented a slightly reduced version of Twitter's advanced search page in Java, constructing the GUI using the JavaFX library and retrieving results using the Twitter API, assembling requests by hand and making requests with HTTP. This personal project was intended to serve as teaching experience with web APIs, and I hope to use it to gather data for use in NLP experiments in the future.</span></p>
+                </div>
+            </div>
+            <div class="col-sm-6 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{ site.project.ocamldhcp.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><a href="{{ site.project.ocamldhcp.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ site.project.ocamldhcp.name }}</a></h4>
+                    <p><span data-i18n="ocamldhcp.jalpc">During the summer of 2015, I wrote a DHCP server in OCaml, for use with the Mirage platform. I was working within the OCaml Labs research team at the University of Cambridge, and utilised several research projects in the implementation: Mirage itself for networking and the Irmin distributed database system to handle the mutable state of the server, e.g. in use leases. Package demultiplexing was handled in a purely functional manner, and the functional paradigm lead to an elegant solution to this problem.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+<!--<section id="blog" class="navy-section testimonials" style="margin-top: 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
+                <br>
+                <br>
+                <br>
+                <a class="btn btn-lg btn-default btn-rounded btn-outline wow bounceIn" href="/blog/"><span data-i18n="blog.my_blog">My Blog</span></a>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</section> -->
+<script>
+$(document).ready(function() {
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 80
+    });
+    // Page scrolling feature
+    $('a.page-scroll').bind('click', function(event) {
+        var link = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(link.attr('href')).offset().top - 50
+        }, 500);
+        event.preventDefault();
+        $("#navbar").collapse('hide');
+    });
+});
+var cbpAnimatedHeader = (function() {
+    var docElem = document.documentElement,
+        header = document.querySelector('.navbar-default'),
+        didScroll = false,
+        changeHeaderOn = 200;
+
+    function init() {
+        window.addEventListener('scroll', function(event) {
+            if (!didScroll) {
+                didScroll = true;
+                setTimeout(scrollPage, 250);
+            }
+        }, false);
+    }
+
+    function scrollPage() {
+        var sy = scrollY();
+        if (sy >= changeHeaderOn) {
+            $(header).addClass('navbar-scroll');
+        } else {
+            $(header).removeClass('navbar-scroll');
+        }
+        didScroll = false;
+    }
+
+    function scrollY() {
+        return window.pageYOffset || docElem.scrollTop;
+    }
+    init();
+
+})();
+// Activate WOW.js plugin for animation on scrol
+new WOW().init();
+</script>
+<!--<script>
+$(document).ready(function() {
+    $.i18n.init({
+        resGetPath: 'static/locales/__lng__.json',
+        load: 'unspecific',
+        fallbackLng: false,
+        lng: 'en'
+    }, function(t) {
+        $('.i18container').i18n();
+        // $('#i18_title').i18n();
+        $('#i18_navbar').i18n();
+        $('#i18_about_me').i18n();
+        $('#i18_skills').i18n();
+        $('#i18_projects').i18n();
+        $('#i18_blog').i18n();
+        $('#i18_link').i18n();
+    });
+    $('.set_en').on('click', function() {
+        i18n.setLng('en', function() {
+            $('.i18container').i18n();
+            // $('#i18_title').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_me').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_link').i18n();
+            // $('.set_en').addClass('active');
+            // $('.set_cn').removeClass('active');
+        });
+    });
+    $('.set_cn').on('click', function() {
+        i18n.setLng('zh', function() {
+            $('.i18container').i18n();
+            // $('#i18_title').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_me').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_link').i18n();
+            // $('.set_cn').addClass('active');
+            // $('.set_en').removeClass('active');
+        });
+    });
+});
+</script>-->
